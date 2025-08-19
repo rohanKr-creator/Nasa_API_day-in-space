@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>NASA Day in Space</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="nasa-api-key" content="">
+  <link href="./styles.css" rel="stylesheet">
+</head>
+<body>
+  <div class="topbar">
+    <div class="brand">
+      <div class="logo" aria-hidden="true"></div>
+      <h1>Day in Space</h1>
+    </div>
+    <div class="actions">
+      <a href="./about.html" class="icon-btn" title="About Us">About Us</a>
+    </div>
+  </div>
+
+  <div class="wrap">
+    <aside class="card">
+      <div class="card-head">
+        <h2 style="margin:0 0 6px 0;">Pick a Date</h2>
+        <div class="hint">See images and events captured by NASA on a past day.</div>
+      </div>
+      <div class="card-body">
+        <div class="fieldset">
+          <div class="row">
+            <div class="grow">
+              <label for="date">Date</label>
+              <input id="date" type="date" max="">
+            </div>
+          </div>
+
+          <div class="row">
+            <button id="todayBtn" class="btn ghost">Jump to Today (APOD)</button>
+            <button id="fetchBtn" class="btn">Fetch</button>
+          </div>
+
+          <div class="kpis">
+            <div class="kpi">
+              <div class="n" id="kpiTotal">0</div>
+              <div class="t">Total items</div>
+            </div>
+            <div class="kpi">
+              <div class="n" id="kpiPhotos">0</div>
+              <div class="t">Photos</div>
+            </div>
+            <div class="kpi">
+              <div class="n" id="kpiEvents">0</div>
+              <div class="t">Events</div>
+            </div>
+          </div>
+
+          <div class="note">Uses NASA APOD, EPIC, and NEO feeds. Some dates may have limited content.</div>
+        </div>
+      </div>
+    </aside>
+
+    <main class="card">
+      <div class="card-head">
+        <h2 style="margin:0 0 6px 0;">Results</h2>
+        <div class="hint" id="status">Pick a date and click Fetch.</div>
+      </div>
+      <div class="card-body">
+        <div id="results" class="grid"></div>
+        <div id="empty" class="empty" style="display:none">No items found for this date. Try another day.</div>
+
+        <div class="footer-note">
+          This app displays images and details only if provided by NASA APIs. Availability and metadata vary by date and endpoint.
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+
+  <!-- Details Drawer -->
+  <div id="detailsDrawer" class="drawer" aria-hidden="true">
+    <div class="drawer-content" role="dialog" aria-modal="true" aria-labelledby="drawerTitle">
+      <div class="drawer-header">
+        <div class="drawer-title-wrap">
+          <div id="drawerBadge" class="badge"></div>
+          <h3 id="drawerTitle">Details</h3>
+        </div>
+        <button id="drawerClose" class="icon-btn" aria-label="Close details">Close</button>
+      </div>
+      <div id="drawerBody" class="drawer-body"></div>
+    </div>
+  </div>
+
+  <script src="./app.js"></script>
+</body>
+</html>
