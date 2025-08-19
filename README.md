@@ -59,3 +59,6 @@ cd day-in-space</pre>
     <li>Data & imagery: <a href="https://api.nasa.gov/" target="_blank">NASA Open APIs</a></li>
     <li>Built with plain HTML, CSS, and JavaScript.</li>
   </ul>
+
+## 👨‍🚀 Team Members
+- [@RishiSingh1256] (https://github.com/RishiSingh1456)
