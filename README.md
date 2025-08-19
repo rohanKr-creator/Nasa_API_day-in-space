@@ -61,4 +61,4 @@ cd day-in-space</pre>
   </ul>
 
 ## 👨‍🚀 Team Members
-- [@RishiSingh1256] (https://github.com/RishiSingh1456)
+- [@RishiSingh1456] (https://github.com/RishiSingh1456)
